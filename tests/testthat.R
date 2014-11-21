@@ -1,4 +1,4 @@
 library(testthat)
-library(captionr)
+library(mdcaptionr)
 
-test_check("captionr")
+test_check("mdcaptionr")

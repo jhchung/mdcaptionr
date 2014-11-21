@@ -49,4 +49,15 @@ print_label <- function(marker_obj, marker, prefix){
   return(output_label)
 }
 
-
+#' Print caption with caption label.
+#'
+#' @param marker_obj \code{marker_obj} containing markers and their labels.
+#' @param marker \code{character} string with marker name.
+#' @param prefix \code{character} string with caption label prefix.
+#' @param caption \code{character} string with caption text.
+#' @return \code{character} string with full caption.
+#' @export
+print_caption <- function(marker_obj, marker, prefix, caption){
+  output_caption <- paste(print_label(marker_obj, marker, prefix), caption)
+  return(output_caption)
+}

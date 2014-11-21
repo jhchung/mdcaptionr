@@ -9,6 +9,11 @@ vignette: >
   %\VignetteEngine{knitr::rmarkdown}
   %\usepackage[utf8]{inputenc}
 ---
+    ```{r, echo = FALSE}
+    library(mdcaptionr)
+    markers <- marker_obj()
+    
+    ```
 
 # Creating a marker object and adding new markers
 
@@ -16,7 +21,7 @@ The caption markers are contained in a `marker_obj` which is a named list of
 class `marker_obj`.
 
 ```{r, initialize_marker_object}
-library(captionr)
+library(mdcaptionr)
 
 # Initialize new marker object
 markers <- marker_obj()
@@ -30,3 +35,24 @@ markers <- label(markers, "fig.awesome_figure")
 markers
 ```
 
+# Using `mdcaptionr`
+
+## Setting up
+
+At the begining of the document.
+
+    ```{r, setup}
+    library(mdcaptionr)
+    markers <- marker_obj()
+    ```
+
+At the begining of each section, you need to add an R code block with the marker labels you will call in the section. This means that while writing, you need to go back to the begining of that section and add label markers after the fact.
+
+### Awesome section
+```{r, section_captions}
+markers <- label(markers, "fig.awesome_figure")
+```
+
+```{r, echo=FALSE, fig.cap=print_caption(markers, "fig.awesome_figure", "Figure", "This is an awesome figure!")}
+plot(cars)
+```

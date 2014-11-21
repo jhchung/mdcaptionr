@@ -1,4 +1,5 @@
 library(mdcaptionr)
+library(testthat)
 
 test_that("marker_obj intializes a new marker object", {
   test_markers <- marker_obj()

@@ -8,7 +8,7 @@
 extract_marker_type <- function(marker_name){
   marker_split <- strsplit(marker_name, "\\.")[[1]]
   if(length(marker_split) == 2){
-    marker_type <- strsplit(marker_name, "\\.")[[1]][1]
+    marker_type <- marker_split[1]
   } else {
     stop("marker name incorrect format. Use '<type>.<marker_name>'.")
   }
