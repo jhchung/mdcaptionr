@@ -1,0 +1,18 @@
+Package: mdcaptionr
+Title: Create caption labels in markdown documents
+Version: 0.1
+Authors@R: person("Jonathan", "Chung", email = "jwbomt@gmail.com",
+    role = c("aut", "cre"))
+Description: This package creates caption labels for markdown documents. It
+    emulates the \code{ref} \code{label} syntax from LaTeX.
+Depends:
+    R (>= 3.1.1)
+Imports:
+    plyr,
+    dplyr
+License: What license is it under?
+LazyData: true
+Suggests:
+    knitr,
+    testthat
+VignetteBuilder: knitr

@@ -1,0 +1,113 @@
+PackratFormat: 1.4
+PackratVersion: 0.4.1.1
+RVersion: 3.1.1
+Repos: CRAN=http://cran.case.edu/,
+    CRANextra=http://www.stats.ox.ac.uk/pub/RWin,
+    BioCsoft=http://bioconductor.org/packages/2.14/bioc,
+    BioCann=http://bioconductor.org/packages/2.14/data/annotation,
+    BioCexp=http://bioconductor.org/packages/2.14/data/experiment,
+    BioCextra=http://bioconductor.org/packages/2.14/extra
+
+Package: assertthat
+Source: CRAN
+Version: 0.1
+
+Package: BH
+Source: CRAN
+Version: 1.54.0-5
+
+Package: bitops
+Source: CRAN
+Version: 1.0-6
+Hash: cb26464a8321628636b547518994c931
+
+Package: DBI
+Source: CRAN
+Version: 0.3.1
+
+Package: devtools
+Source: CRAN
+Version: 1.6.1
+Requires: digest, evaluate, httr, jsonlite, memoise, RCurl, rstudioapi,
+    whisker
+Hash: e3096b832604a7a36ff0a6455e5cdddc
+
+Package: digest
+Source: CRAN
+Version: 0.6.4
+Hash: e4bf0e79b15a352510aff0de905d31e2
+
+Package: dplyr
+Source: CRAN
+Version: 0.3.0.2
+Requires: assertthat, BH, DBI, lazyeval, magrittr, R6, Rcpp
+
+Package: evaluate
+Source: CRAN
+Version: 0.5.5
+Requires: stringr
+Hash: 20881970e590ee68de97a468694db7b0
+
+Package: httr
+Source: CRAN
+Version: 0.5
+Requires: digest, jsonlite, RCurl, stringr
+Hash: 68a70bdd16fb949a12e4fda7f31def00
+
+Package: jsonlite
+Source: CRAN
+Version: 0.9.13
+Hash: dd2cfbfb6cce930fef0be435a7093e8a
+
+Package: lazyeval
+Source: CRAN
+Version: 0.1.9
+
+Package: magrittr
+Source: CRAN
+Version: 1.0.1
+
+Package: memoise
+Source: CRAN
+Version: 0.2.1
+Requires: digest
+Hash: fc52fa39dfd216c44d64812ff31b1c67
+
+Package: packrat
+Source: CRAN
+Version: 0.4.1-1
+Hash: 5716097644904b9c1b4be2692de16005
+
+Package: plyr
+Source: CRAN
+Version: 1.8.1
+Requires: Rcpp
+
+Package: R6
+Source: CRAN
+Version: 2.0.1
+
+Package: Rcpp
+Source: CRAN
+Version: 0.11.3
+
+Package: RCurl
+Source: CRAN
+Version: 1.95-4.3
+Requires: bitops
+Hash: 158377109f939084a72f240125f821d3
+
+Package: rstudioapi
+Source: CRAN
+Version: 0.1
+Hash: 5bd4449a873ec652a05c932312dcf04b
+
+Package: stringr
+Source: CRAN
+Version: 0.6.2
+Hash: cdde0cfa0f52cffeaca23a11a3899779
+
+Package: whisker
+Source: CRAN
+Version: 0.3-2
+Hash: 186ab2937fec1694c8a63009a2389c4e
