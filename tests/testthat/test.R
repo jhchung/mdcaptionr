@@ -57,3 +57,13 @@ test_that("check_if_prefix_is_supplemental", {
   expect_true(check_if_prefix_is_supplemental(test_label_4))
   expect_false(check_if_prefix_is_supplemental(test_label_5))
 })
+
+test_that("print_label works", {
+  test_markers <- marker_obj()
+  test_markers <- label(test_markers, "fig.foo")
+  expect_match(print_label(test_markers, "fig.foo", "Figure"), "Figure 1:")
+  expect_match(print_label(test_markers, "fig.foo", "Figure S"), "Figure S1:")
+  expect_match(print_label(test_markers, "fig.foo", "Supplemental Figure"),
+               "Supplemental Figure 1:")
+  expect_match(print_label(test_markers, "fig.foo", "Figures"), "Figures 1:")
+})

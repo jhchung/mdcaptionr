@@ -24,11 +24,18 @@ summarize_markers <- function(marker_obj){
 #' @return \code{boolean}.
 #' @export
 check_if_prefix_is_supplemental <- function(prefix){
-  ends_in_s <- grepl("s", substr(prefix, nchar(prefix), nchar(prefix)),
-                     ignore.case = TRUE)
   contains_supplemental <- grepl("sup", prefix, ignore.case = TRUE)
   is_supplemental <- any(ends_in_s, contains_supplemental)
   return(is_supplemental)
+}
+
+#' Check if prefix ends in S.
+#' @param prefix \code{character} string with caption prefix.
+#' @return \code{boolean}
+prefix_ends_in_s <- function(prefix){
+  prefix_check <- grepl(" s", substr(prefix, nchar(prefix) - 1, nchar(prefix)),
+                        ignore.case = TRUE)
+  return(prefix_check)
 }
 
 #' For printing labels in a caption or other text environment.
@@ -40,8 +47,8 @@ check_if_prefix_is_supplemental <- function(prefix){
 #' @export
 #' @seealso \code{\link{check_if_prefix_is_supplemental}}
 print_label <- function(marker_obj, marker, prefix){
-  is_supplemental <- substr(prefix, nchar(prefix), nchar(prefix)) == "S"
-  if(is_supplemental){
+  ends_with_s <- prefix_ends_in_s(prefix)
+  if(ends_with_s){
     output_label <- paste0(prefix, ref(marker_obj, marker), ":")
   } else {
     output_label <- paste0(prefix, " ", ref(marker_obj, marker), ":")
