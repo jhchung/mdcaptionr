@@ -10,7 +10,7 @@ Depends:
 Imports:
     plyr,
     dplyr
-License: What license is it under?
+License: MIT 
 LazyData: true
 Suggests:
     knitr,
